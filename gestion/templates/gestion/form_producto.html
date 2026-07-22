@@ -1,0 +1,21 @@
+{% extends 'gestion/base.html' %}
+
+{% block titulo %}{{ titulo }} - Andrea Márquez{% endblock %}
+
+{% block contenido %}
+<div class="card shadow-sm border mx-auto" style="max-width: 500px;">
+    <div class="card-header bg-dark text-white fw-boldfs-5">{{ titulo }}</div>
+    <div class="card-body p-4">
+        <form method="POST">
+            {% csrf_token %}
+            
+            {{ form.as_p }}
+            
+            <div class="mt-4 d-flex gap-2">
+                <button type="submit" class="btn btn-success flex-grow-1 shadow-sm">💾 Guardar Cambios</button>
+                <a href="{% url 'lista_productos' %}" class="btn btn-outline-secondary shadow-sm">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
