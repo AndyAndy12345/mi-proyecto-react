@@ -1,4 +1,4 @@
-# Proyecto Modificado por Andy
+# Proyecto Modificado por Andy.
 
 ## 📝 Descripción
 Aplicación web fullstack orientada a la gestión de proyectos y registros dinámicos. El sistema cuenta con una interfaz web responsiva construida en React que consume un servicio web API REST enfocado en operaciones CRUD (Crear, Leer, Actualizar y Eliminar).
