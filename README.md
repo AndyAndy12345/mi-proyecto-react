@@ -29,3 +29,8 @@ Tener instalado **Node.js** (versión 18 o superior) y **Python 3.x** en el sist
 ```bash
 git clone [https://github.com/AndyAndy12345/mi-proyecto-react.git](https://github.com/AndyAndy12345/mi-proyecto-react.git)
 cd mi-proyecto-react
+
+* Nueva función agregada
+feat: Agregar descripcion de nueva funcion
+* Ajuste de estilos
+style: Mejorar documentacion de componentes
