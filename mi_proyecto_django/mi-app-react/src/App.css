@@ -1,0 +1,56 @@
+import TarjetaTarea from './components/TarjetaTarea';
+
+/*
+  =============================================================================
+  EXPLICACIÓN TEÓRICA (RESPUESTA AL PUNTO 5 DE LA ACTIVIDAD)
+  =============================================================================
+
+  1. ¿QUÉ SON LAS PROPIEDADES (PROPS)?
+     Son argumentos o datos de entrada que un componente padre le pasa a un 
+     componente hijo. Son de SOLO LECTURA (inmutables) dentro del componente hijo.
+
+  2. ¿QUÉ ES EL ESTADO (STATE)?
+     Es la memoria interna y privada de un componente. Sirve para almacenar datos 
+     que pueden cambiar con el tiempo debido a la interacción del usuario (clics, inputs, etc.).
+
+  3. ¿CUÁNDO UTILIZAR CADA UNO?
+     - Usar PROPS: Cuando quieras configurar o enviarle información desde afuera a un 
+       componente para hacerlo reutilizable (Ej: título, categoría, imagen).
+     - Usar ESTADO: Cuando la información cambie dinámicamente durante el uso de la app 
+       y requieras que la vista se actualice automáticamente (Ej: contadores, botones 
+       on/off, modales abriendo/cerrando, datos de formularios).
+  =============================================================================
+*/
+
+function App() {
+  return (
+    <div style={{ fontFamily: 'Arial, sans-serif', padding: '20px', textAlign: 'center', backgroundColor: '#f8fafc', minHeight: '100vh' }}>
+      <h1>(Sesión 5) Actividad 5: Props y Estado en React</h1>
+      <p>Instancias dinámicas del componente con manejo de estado e interacción:</p>
+
+      {/* Punto 2: Mostrar varias instancias con datos diferentes mediante props */}
+      <TarjetaTarea 
+        titulo="Diseñar Base de Datos" 
+        descripcion="Crear tablas y esquemas en PostgreSQL para la API." 
+        categoria="Backend" 
+        estadoInicial={true} 
+      />
+
+      <TarjetaTarea 
+        titulo="Configurar Vite + React" 
+        descripcion="Instalar componentes y estructuras del entorno frontend." 
+        categoria="Frontend" 
+        estadoInicial={false} 
+      />
+
+      <TarjetaTarea 
+        titulo="Pruebas Unitarias" 
+        descripcion="Ejecutar python manage.py test en el servidor Django." 
+        categoria="Testing" 
+        estadoInicial={false} 
+      />
+    </div>
+  );
+}
+
+export default App;

@@ -1,0 +1,13 @@
+{% extends 'gestion/base.html' %}
+
+{% block titulo %}Inicio - Andrea Márquez{% endblock %}
+
+{% block contenido %}
+<div class="p-5 mb-4 bg-white rounded-3 shadow-sm border">
+    <div class="container-fluid py-5 text-center">
+        <h1 class="display-5 fw-bold text-dark">¡Bienvenido al Sistema de Gestión!</h1>
+        <p class="col-md-8 mx-auto fs-4 text-muted">Esta es la página principal de la aplicación pública creada por Andrea Márquez para la administración dinámica de inventarios.</p>
+        <a href="{% url 'lista_productos' %}" class="btn btn-dark btn-lg mt-3 shadow">Ver Catálogo de Productos</a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'gestion/base.html' %}
+{% block contenido %}
+<div class="card shadow-sm border mx-auto" style="max-width: 600px;">
+    <div class="card-header bg-dark text-white fw-bold fs-5">🔎 Ficha Técnica del Producto</div>
+    <div class="card-body p-4">
+        <h3 class="text-primary fw-bold mb-3">{{ producto.nombre }}</h3>
+        <p><b>Categoría:</b> <span class="badge bg-secondary">{{ producto.categoria.nombre }}</span></p>
+        <p><b>Precio Unitario:</b> <span class="text-success fw-bold">${{ producto.precio }}</span></p>
+        <p><b>Existencias en Stock:</b> {{ producto.stock }} unidades</p>
+        <div class="mt-4 pt-3 border-top d-flex gap-2">
+            <a href="{% url 'editar_producto' producto.id %}" class="btn btn-warning flex-grow-1 shadow-sm">✏️ Modificar</a>
+            <a href="{% url 'eliminar_producto' producto.id %}" class="btn btn-danger flex-grow-1 shadow-sm">🗑️ Eliminar</a>
+            <a href="{% url 'lista_productos' %}" class="btn btn-outline-secondary shadow-sm">Volver</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

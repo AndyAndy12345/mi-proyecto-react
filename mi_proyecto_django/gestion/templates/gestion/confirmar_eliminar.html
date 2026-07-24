@@ -1,0 +1,15 @@
+{% extends 'gestion/base.html' %}
+{% block contenido %}
+<div class="card border-danger shadow-sm mx-auto text-center" style="max-width: 500px;">
+    <div class="card-header bg-danger text-white fw-bold fs-5">⚠️ Confirmar Eliminación</div>
+    <div class="card-body p-4">
+        <p class="fs-5">¿Estás completamente segura de que deseas eliminar el producto <b>{{ producto.nombre }}</b>?</p>
+        <p class="text-muted small">Esta acción es irreversible y afectará la base de datos.</p>
+        <form method="POST" class="mt-4 d-flex gap-2 justify-content-center">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger px-4 shadow-sm">Sí, Eliminar Registro</button>
+            <a href="{% url 'lista_productos' %}" class="btn btn-secondary px-4 shadow-sm">Cancelar</a>
+        </form>
+    </div>
+</div>
+{% endblock %}
